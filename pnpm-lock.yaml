@@ -7,6 +7,10 @@ settings:
 importers:
 
   .:
+    dependencies:
+      turbo-ignore:
+        specifier: ^2.5.4
+        version: 2.5.4
     devDependencies:
       prettier:
         specifier: ^3.5.3
@@ -1353,6 +1357,11 @@ packages:
   json-stable-stringify-without-jsonify@1.0.1:
     resolution: {integrity: sha512-Bdboy+l7tA3OGW6FjyFHWkP5LuByj1Tk33Ljyq0axyzdk9//JSi2u3fP1QSmd1KNwq6VOKYGlAu87CisVir6Pw==}
 
+  json5@2.2.3:
+    resolution: {integrity: sha512-XmOWe7eyHYH14cLdVPoyg+GOH3rYX++KpzrylJwSW98t3Nk+U8XOl8FWKOgwtzdb8lXGf6zYwDUzeHMWfxasyg==}
+    engines: {node: '>=6'}
+    hasBin: true
+
   jsonfile@6.1.0:
     resolution: {integrity: sha512-5dgndWOriYSm5cnYaJNhalLNDKOqFwyDB/rr1E9ZsGciGvKPs8R2xYGCacuf3z6K1YKDz182fd+fY3cn3pMqXQ==}
 
@@ -1964,6 +1973,10 @@ packages:
     resolution: {integrity: sha512-/gtHPqbGQXDFhrmy+Q/MFW2HUTUlThJ97WLLSe4bxkDrKHecDYhAjbZ4rN3MM93RV9STQb3Tqy4pZBtsd4DfCw==}
     cpu: [arm64]
     os: [darwin]
+
+  turbo-ignore@2.5.4:
+    resolution: {integrity: sha512-40Dpk/V9FZ1K9xYPacuAqvXvImBI9KqjldpQvgRpTZ9QFzW+DD1cSYJNZnDjU8gymJ79Tus3Ow4MDNI6dAKbyQ==}
+    hasBin: true
 
   turbo-linux-64@2.4.4:
     resolution: {integrity: sha512-SR0gri4k0bda56hw5u9VgDXLKb1Q+jrw4lM7WAhnNdXvVoep4d6LmnzgMHQQR12Wxl3KyWPbkz9d1whL6NTm2Q==}
@@ -3500,6 +3513,8 @@ snapshots:
 
   json-stable-stringify-without-jsonify@1.0.1: {}
 
+  json5@2.2.3: {}
+
   jsonfile@6.1.0:
     dependencies:
       universalify: 2.0.1
@@ -4208,6 +4223,10 @@ snapshots:
 
   turbo-darwin-arm64@2.4.4:
     optional: true
+
+  turbo-ignore@2.5.4:
+    dependencies:
+      json5: 2.2.3
 
   turbo-linux-64@2.4.4:
     optional: true

@@ -1,0 +1,30 @@
+{
+    "$schema": "https://turbo.build/schema.json",
+    "tasks": {
+      "topo": {
+        "dependsOn": ["^topo"]
+      },
+      "build": {
+        "outputs": [".next/**", "!.next/cache/**"],
+        "dependsOn": ["topo"]
+      },
+      "lint": {
+        "cache": false
+      },
+      "type-check": {
+        "cache": false
+      },
+      "clean": {
+        "cache": false
+      },
+      "dev": {
+        "cache": false,
+        "persistent": true,
+        "dependsOn": ["^build"]
+      },
+      "start": {
+        "cache": false,
+        "persistent": true
+      }
+    }
+  }
